@@ -1,0 +1,205 @@
+%==================================================================
+% BAB 3 (PROPOSAL) — RANCANGAN PENELITIAN
+%
+% Berkas ini hanya dipakai oleh proposal.tex. Bab 1 dan Bab 2 dipakai
+% bersama dengan naskah Tugas Akhir, sehingga "yang dijanjikan" pada
+% proposal sama persis dengan yang kelak dibuktikan pada Tugas Akhir.
+%
+% Label yang harus ada di Bab 1 (rumusan masalah):
+%   rq:rancang, rq:otomasi, rq:efektivitas
+%==================================================================
+
+\chapter{RANCANGAN PENELITIAN}
+
+\section{Metodologi Penelitian}
+Bab ini menjelaskan rancangan penelitian yang akan dilaksanakan untuk menjawab
+rumusan masalah pada \cref{rq:rancang}, \cref{rq:otomasi}, dan
+\cref{rq:efektivitas}. Penelitian akan dilakukan melalui pengembangan sistem
+menggunakan model \textit{Rapid Application Development} (RAD) yang terdiri atas
+tahap \textit{Requirement Planning}, \textit{RAD Design Workshop}, dan
+\textit{Implementation}, dengan pembatasan hak akses berbasis
+\textit{Role-Based Access Control} (RBAC). Sistem yang dihasilkan kemudian
+dievaluasi melalui \textit{black-box testing}, \textit{User Acceptance Testing}
+(UAT), dan \textit{System Usability Scale} (SUS) untuk memperoleh gambaran
+kelayakan fungsional dan penerimaan pengguna. Alur penelitian secara keseluruhan
+ditunjukkan pada \cref{fig:alurproposal}.
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=8cm,keepaspectratio]{metode}
+\caption{Langkah Penelitian}
+\label{fig:alurproposal}
+\end{figure}
+
+\subsection{Studi Literatur}
+Pada tahap ini peneliti akan menelaah penelitian terdahulu dan landasan teori
+yang relevan dengan sistem informasi manajemen, model RAD, RBAC,
+\textit{black-box testing}, UAT, dan SUS, serta penelitian sistem monitoring
+magang pada \cite{Rosanti2025} dan \cite{Asehan2026}.
+Studi literatur dilakukan untuk memastikan bahwa model pengembangan, instrumen
+pengujian, dan teknik analisis yang dipilih sesuai dengan tujuan penelitian.
+
+\subsection{\textit{Requirement Planning}}
+Pada tahap ini peneliti akan merumuskan tujuan dan kebutuhan sistem bersama
+calon pengguna, yaitu Koordinator Magang, Kepala Program Studi, Dosen
+Pembimbing, Pembimbing Eksternal, dan Mahasiswa. Kebutuhan dikumpulkan melalui
+wawancara dan pengamatan terhadap alur magang yang berjalan saat ini, mencakup
+pengajuan dan validasi pendaftaran, pelaksanaan dan bimbingan, serta penilaian
+akhir. Keluaran tahap ini adalah daftar kebutuhan fungsional dan non-fungsional
+serta identifikasi hak akses setiap peran. Sesuai karakteristik RAD, tahap ini
+dialokasikan singkat karena penyempurnaan kebutuhan akan berlanjut pada tahap
+berikutnya (\cite{Parlika2023}).
+
+\subsection{\textit{RAD Design Workshop}}
+Pada tahap ini peneliti akan menyusun rancangan sistem bersama pengguna dalam
+sesi-sesi perancangan. Rancangan mencakup \textit{use case diagram},
+\textit{activity diagram}, rancangan basis data, rancangan antarmuka, dan
+matriks peran terhadap izin akses (\textit{role--permission}) sebagai dasar
+penerapan RBAC. Rancangan yang telah disusun ditinjau oleh pengguna, kemudian
+direvisi sampai sesuai dengan kebutuhan.
+
+\subsection{\textit{Implementation}}
+Pada tahap ini rancangan diimplementasikan menjadi aplikasi web yang responsif
+dan disusun per modul sesuai ruang lingkup fungsional, yaitu pendaftaran magang,
+pelaksanaan dan bimbingan, serta penilaian akhir. Pengujian dilakukan secara
+berulang selama implementasi, dan sistem dinyatakan siap digunakan apabila telah
+dinilai layak oleh peneliti dan pengguna (\cite{Parlika2023}).
+
+\subsection{Penyusunan Instrumen}
+Instrumen penelitian terdiri atas tiga bagian. Pertama, lembar skenario
+\textit{black-box testing} dengan teknik \textit{state transition} yang memuat
+kolom transisi, asal, aksi, dan tujuan, serta kolom skenario, \textit{output},
+dan kesimpulan (Mintarsih, 2023). Lembar ini mencakup skenario akses yang
+diizinkan dan yang ditolak untuk setiap peran guna menguji penerapan RBAC.
+Kedua, kuesioner UAT yang disusun pada empat variabel, yaitu fungsionalitas
+sistem, kinerja sistem, pengalaman dan tampilan antarmuka, serta efisiensi dan
+produktivitas (\cite{AliyahAliyah2025}). Ketiga, kuesioner SUS yang
+terdiri atas 10 pernyataan (\cite{Fiandhika2024}). Kuesioner UAT dan SUS
+menggunakan Skala Likert lima poin, dan masing-masing dilengkapi kolom saran
+terbuka.
+
+\subsection{Populasi dan Sampel}
+Populasi penelitian adalah seluruh calon pengguna sistem pada Program Studi
+Sistem Informasi Unika Atma Jaya, yaitu mahasiswa, Koordinator Magang, Dosen
+Pembimbing, Pembimbing Eksternal, dan Kepala Program Studi. Sampel akan dipilih
+secara purposif dengan kriteria terlibat atau akan terlibat langsung dalam alur
+magang dan telah mencoba sistem. Setiap peran diwakili oleh sedikitnya satu
+responden, dengan mahasiswa sebagai kelompok terbesar. Jumlah responden akan
+ditetapkan bersama pembimbing dengan mempertimbangkan ketersediaan pengguna;
+sebagai acuan, \cite{AliyahAliyah2025} melibatkan 16 responden yang
+mewakili seluruh peran pengguna sistem.
+
+\subsection{Pengumpulan Data}
+Pengumpulan data dilakukan dalam dua bagian. Pada \textit{black-box testing},
+peneliti menjalankan seluruh skenario pada lembar pengujian dan mencatat
+\textit{output} yang dihasilkan sistem. Pada UAT dan SUS, responden akan
+menjalankan sistem sesuai tugas yang relevan dengan perannya, kemudian mengisi
+kuesioner daring melalui Google Forms. Setiap butir dinilai dengan Skala Likert
+lima poin sebagaimana disajikan pada \cref{tab:likertproposal}.
+
+\begin{table}[H]
+    \centering
+    \caption{Skala Likert yang akan digunakan}
+    \label{tab:likertproposal}
+    \small
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Skor} & \textbf{Pernyataan} \\ \hline
+        1 & Sangat Tidak Setuju (STS) \\ \hline
+        2 & Tidak Setuju (TS)         \\ \hline
+        3 & Netral (N)                \\ \hline
+        4 & Setuju (S)                \\ \hline
+        5 & Sangat Setuju (SS)        \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Teknik Analisis Data}
+Data yang terkumpul akan dianalisis melalui tiga tahap.
+
+Pertama, hasil \textit{black-box testing} dicatat sebagai berhasil atau tidak
+berhasil pada setiap transisi. Tingkat keberhasilan dihitung dengan
+\cref{eq:keberhasilan}. Kesalahan yang ditemukan akan diperbaiki, lalu skenario
+terkait diuji ulang sebelum UAT dilakukan.
+\begin{equation}
+    \label{eq:keberhasilan}
+    \mathrm{Tingkat\ keberhasilan} =
+    \frac{\mathrm{jumlah\ skenario\ berhasil}}{\mathrm{jumlah\ seluruh\ skenario}}
+    \times 100\%
+\end{equation}
+
+Kedua, hasil UAT dianalisis secara deskriptif. Nilai rata-rata (\textit{mean})
+setiap butir dihitung dengan membagi total bobot jawaban dengan jumlah
+responden, kemudian dikonversi menjadi persentase terhadap bobot maksimum
+sebagaimana pada \cref{eq:uat}.
+\begin{equation}
+    \label{eq:uat}
+    \mathrm{Persentase} = \frac{\mathrm{nilai\ mean}}{\mathrm{bobot\ maksimum}}
+    \times 100\%
+\end{equation}
+Persentase setiap butir dirata-ratakan per variabel, lalu diinterpretasikan
+sebagai berikut: 0--20 persen sangat kurang baik, 21--40 persen kurang baik,
+41--60 persen cukup baik, 61--80 persen baik, dan 81--100 persen sangat baik
+(\cite{AliyahAliyah2025}).
+
+Ketiga, skor SUS setiap responden dihitung dengan \cref{eq:sus}, dengan $R_i$
+adalah skor jawaban responden pada pernyataan ke-$i$.
+\begin{equation}
+    \label{eq:sus}
+    \mathrm{Skor\ SUS} = \left( \sum_{i \in \{1,3,5,7,9\}} (R_i - 1)
+    + \sum_{i \in \{2,4,6,8,10\}} (5 - R_i) \right) \times 2{,}5
+\end{equation}
+Skor seluruh responden dirata-ratakan, dan hasilnya dibandingkan dengan nilai
+ambang 68 yang lazim digunakan sebagai batas \textit{usability} rata-rata. Karena
+skor SUS lebih mencerminkan persepsi pengguna (\cite{Fiandhika2024}),
+hasilnya akan dibandingkan dengan temuan \textit{black-box testing}, skor UAT,
+dan saran terbuka responden.
+
+\subsection{Penulisan Laporan}
+Tahap akhir adalah penyusunan laporan yang merangkum seluruh proses dan hasil
+penelitian menjadi naskah Tugas Akhir yang utuh.
+
+\section{Matriks Keterkaitan Penelitian}
+Agar penelitian tetap terarah, setiap rumusan masalah dipetakan terhadap data dan
+teknik analisis yang direncanakan, sebagaimana ditunjukkan pada
+\cref{tab:linkageproposal}.
+
+\begin{table}[H]
+    \centering
+    \caption{Rencana keterkaitan penelitian}
+    \label{tab:linkageproposal}
+    \small
+    \begin{tabularx}{\linewidth}{|c|X|X|}
+        \hline
+        \textbf{RQ} & \textbf{Data yang direncanakan} & \textbf{Teknik analisis} \\ \hline
+        \cref{rq:rancang}     & Kebutuhan fungsional dan non-fungsional, rancangan sistem (\textit{use case}, \textit{activity diagram}, basis data, antarmuka), dan hasil pengujian \textit{state transition} & Analisis kebutuhan, pemodelan sistem, dan \textit{black-box testing} \\ \hline
+        \cref{rq:otomasi}     & Alur pengajuan, validasi, bimbingan, dan penilaian magang; hasil skenario akses per peran; skor UAT variabel fungsionalitas dan efisiensi & Pemodelan alur kerja, \textit{black-box testing}, dan analisis deskriptif UAT \\ \hline
+        \cref{rq:efektivitas} & Skor UAT (4 variabel) dan skor SUS (10 pernyataan) dari responden & Persentase dan interpretasi skor UAT, perhitungan skor SUS \\ \hline
+    \end{tabularx}
+\end{table}
+
+\section{Rencana dan Jadwal Penelitian}
+Rencana pelaksanaan penelitian disusun selama enam bulan sebagaimana ditunjukkan
+pada \cref{tab:jadwal}. Sel yang diarsir menandakan bulan pelaksanaan tiap
+kegiatan.
+
+\definecolor{jadwalisi}{gray}{0.25}
+\begin{table}[H]
+    \centering
+    \caption{Rencana dan jadwal penelitian}
+    \label{tab:jadwal}
+    \small
+    \begin{tabular}{|c|l|*{6}{>{\centering\arraybackslash}p{0.6cm}|}}
+        \hline
+        \multirow{2}{*}{\textbf{No.}} & \multirow{2}{*}{\textbf{Kegiatan}}
+          & \multicolumn{6}{c|}{\textbf{Bulan}} \\ \cline{3-8}
+         & & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+        1. & Studi literatur                 & \cellcolor{jadwalisi} &                       &                       &                       &                       &                       \\ \hline
+        2. & \textit{Requirement Planning}   & \cellcolor{jadwalisi} & \cellcolor{jadwalisi} &                       &                       &                       &                       \\ \hline
+        3. & \textit{RAD Design Workshop}    &                       & \cellcolor{jadwalisi} & \cellcolor{jadwalisi} &                       &                       &                       \\ \hline
+        4. & \textit{Implementation}         &                       &                       & \cellcolor{jadwalisi} & \cellcolor{jadwalisi} &                       &                       \\ \hline
+        5. & Pengujian (\textit{black-box}, UAT, SUS) &              &                       &                       & \cellcolor{jadwalisi} & \cellcolor{jadwalisi} &                       \\ \hline
+        6. & Analisis data                   &                       &                       &                       &                       & \cellcolor{jadwalisi} &                       \\ \hline
+        7. & Penulisan laporan               &                       &                       &                       &                       & \cellcolor{jadwalisi} & \cellcolor{jadwalisi} \\ \hline
+        8. & Sidang                          &                       &                       &                       &                       &                       & \cellcolor{jadwalisi} \\ \hline
+    \end{tabular}
+\end{table}

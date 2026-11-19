@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: laporan.aux
+The style file: apalike-id.bst
+A level-1 auxiliary file: xx-sampul.aux
+A level-1 auxiliary file: xx-sampuldalam.aux
+A level-1 auxiliary file: xx-form-pembimbing.aux
+A level-1 auxiliary file: xx-form-selesai.aux
+A level-1 auxiliary file: xx-form-pengesahan.aux
+A level-1 auxiliary file: xx-form-keaslian.aux
+A level-1 auxiliary file: a2-abstrak.aux
+A level-1 auxiliary file: a3-abstract.aux
+A level-1 auxiliary file: a4-persembahan.aux
+A level-1 auxiliary file: a5-katapengantar.aux
+A level-1 auxiliary file: xx-daftar.aux
+A level-1 auxiliary file: a6-daftarsingkatan.aux
+A level-1 auxiliary file: b1-bab1.aux
+A level-1 auxiliary file: b2-bab2.aux
+A level-1 auxiliary file: b3-bab3.aux
+A level-1 auxiliary file: b4-bab4.aux
+A level-1 auxiliary file: b5-bab5.aux
+A level-1 auxiliary file: xx-deklarasi-ai.aux
+A level-1 auxiliary file: xx-daftarpustaka.aux
+A level-1 auxiliary file: a8-lampiran.aux
+Database file #1: a7-pustaka.bib
+Warning--empty journal in Asehan2026
+Warning--empty journal in Parlika2023
+Warning--empty institution in Rosanti2025
+You've used 11 entries,
+            1935 wiz_defined-function locations,
+            561 strings with 6514 characters,
+and the built_in function-call counts, 4239 in all, are:
+= -- 406
+> -- 191
+< -- 8
++ -- 64
+- -- 64
+* -- 369
+:= -- 761
+add.period$ -- 32
+call.type$ -- 11
+change.case$ -- 88
+chr.to.int$ -- 11
+cite$ -- 14
+duplicate$ -- 153
+empty$ -- 284
+format.name$ -- 85
+if$ -- 811
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 10
+newline$ -- 56
+num.names$ -- 33
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 87
+quote$ -- 0
+skip$ -- 115
+stack$ -- 0
+substring$ -- 261
+swap$ -- 9
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 66
+warning$ -- 3
+while$ -- 32
+width$ -- 0
+write$ -- 139
+(There were 3 warnings)

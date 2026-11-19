@@ -1,0 +1,213 @@
+%==================================================================
+% BAB 2 — TINJAUAN PUSTAKA
+%==================================================================
+
+\chapter{TINJAUAN PUSTAKA}
+
+\section{Tinjauan Pustaka}
+
+% CATATAN PENTING
+% Gunakan MATRIKS SINTESIS, bukan tabel per-penelitian dengan kolom
+% "perbedaan dengan penelitian ini". Pada matriks, celah penelitian
+% TERLIHAT sebagai pola (kolom yang kosong di semua baris), sehingga
+% Anda cukup menuliskan apa yang tampak — tidak perlu mengarang kebaruan.
+%
+% Kolom dipilih berdasarkan relevansinya dengan rumusan masalah Anda.
+% Empat sampai enam penelitian yang benar-benar dibedah jauh lebih baik
+% daripada lima belas yang sekadar didaftar.
+
+Bagian ini menyintesiskan penelitian terdahulu yang relevan dengan metode dan 
+teknik yang digunakan dalam perancangan Sistem Informasi Manajemen Magang (SIMA) 
+pada Program Studi Sistem Informasi Unika Atma Jaya. Perbandingan disajikan pada 
+\cref{tab:sintesis} dengan kolom pembanding yang dipilih berdasarkan keterkaitannya dengan 
+rumusan masalah penelitian ini, yaitu metode pengembangan, mekanisme kontrol akses, 
+serta teknik pengujian kelayakan sistem.
+
+\small
+\begin{xltabular}{\textwidth}{
+  >{\RaggedRight\hsize=0.85\hsize}X 
+  >{\RaggedRight\hsize=0.95\hsize}X 
+  >{\RaggedRight\hsize=0.90\hsize}X 
+  >{\RaggedRight\hsize=0.90\hsize}X 
+  >{\RaggedRight\hsize=1.40\hsize}X
+}
+% --- Judul & Keterangan Tabel ---
+\caption{Matriks sintesis penelitian terdahulu} \label{tab:sintesis} \\
+\toprule
+\textbf{Penelitian} & \textbf{Konteks pengguna} & \textbf{Instrumen} & \textbf{Teknik analisis} & \textbf{Temuan utama} \\
+\midrule
+\endfirsthead
+
+% --- Judul di Halaman Sambungan (Halaman Berikutnya) ---
+\multicolumn{5}{c}{{\bfseries Tabel 2.1} -- Lanjutan dari halaman sebelumnya} \\[0.5em]
+\toprule
+\textbf{Penelitian} & \textbf{Konteks pengguna} & \textbf{Instrumen} & \textbf{Teknik analisis} & \textbf{Temuan utama} \\
+\midrule
+\endhead
+
+% --- Garis Penutup Halaman Pertama ---
+\midrule
+\endfoot
+
+% --- Garis Penutup Halaman Terakhir ---
+\bottomrule
+\endlastfoot
+
+% --- Isi Data Tabel ---
+\cite{Parlika2023} & 16 studi penerapan model RAD (2014--2022) pada berbagai skala proyek & Narrative Literature Review & Deskriptif kualitatif & Model RAD menghemat waktu pengembangan 21--120 hari dibanding model tradisional; cocok untuk sistem yang dapat dipecah menjadi modul \\
+\midrule
+\cite{Mintarsih2023} & Sistem Informasi Perpustakaan berbasis web (SMC Foundation) & Black-box testing teknik state transition & Pengujian transisi alur antar-menu & 6 dari 8 transisi berhasil sesuai harapan; 2 transisi gagal karena pembatasan hak akses; ditemukan bug validasi tipe data pada form edit \\
+\midrule
+\cite{AliyahAliyah2025} & Sistem informasi pengelolaan keuangan dan inventaris (CV. Nitah Tirta Makassar) & User Acceptance Testing, kuesioner skala Likert 1--5 & Deskriptif, perhitungan skor interpretasi & Rata-rata skor UAT 87 persen (kategori sangat baik) pada 4 variabel: fungsionalitas, kinerja, antarmuka, efisiensi \\
+\midrule
+\cite{Fiandhika2024} & Sistem e-budgeting pada BUMN sektor asuransi & System Usability Scale + Heuristic Evaluation + wawancara & Studi komparatif skor antarmetode & Skor SUS tidak sepenuhnya valid bila dibandingkan evaluasi ahli; hanya indikator ease of use yang konsisten valid di seluruh metode \\
+\midrule
+\cite{SafiraArmah2024} & Konsep umum Sistem Informasi Manajemen pada organisasi/perusahaan & Studi literatur & Deskriptif & SIM merupakan perpaduan manusia, teknologi, dan prosedur; manfaat utama pada aksesibilitas data dan efisiensi pengambilan keputusan \\
+\midrule
+\cite{MSahyudi2025} & Implementasi RBAC pada aplikasi Enterprise Resource Planning & Systematic Literature Review (protokol PRISMA) & Sintesis tematik dan komparatif & Integrasi RBAC dengan AI meningkatkan keamanan hingga 37 persen; otomatisasi RBAC menurunkan biaya operasional 42 persen dan waktu manajemen akses 65 persen \\
+\end{xltabular}
+
+% Paragraf berikut MEMBACA POLA pada matriks, lalu menyatakan posisi
+% penelitian. Perhatikan bahwa celah dinyatakan berdasarkan apa yang
+% terlihat pada tabel, bukan diklaim begitu saja.
+Berdasarkan \cref{tab:sintesis} terlihat dua pola. Pertama, penelitian-penelitian 
+terdahulu yang membahas model pengembangan (RAD), kontrol akses (RBAC), dan teknik 
+pengujian (black-box, UAT, SUS) umumnya dilakukan secara terpisah pada satu aspek 
+sistem saja, dan belum ada yang mengombinasikan kelima pendekatan tersebut dalam 
+satu alur pengembangan sistem informasi yang utuh. Kolom objek/konteks pada matriks 
+memperlihatkan bahwa objek penelitian terdahulu didominasi oleh sistem informasi 
+bisnis dan organisasi (perpustakaan, keuangan, e-budgeting, ERP), sedangkan konteks 
+sistem informasi manajemen magang pada perguruan tinggi dengan multi-aktor 
+(mahasiswa, Kaprodi, Koordinator Magang, Dosen Pembimbing, Pembimbing Eksternal) 
+belum banyak dieksplorasi. Kedua, temuan \cite{Fiandhika2024} 
+mengindikasikan bahwa pengukuran usability dengan SUS saja berpotensi tidak 
+sepenuhnya valid tanpa didukung metode evaluasi lain, sehingga penggunaan SUS 
+sebaiknya dilengkapi pengujian fungsional seperti black-box testing dan UAT agar 
+hasil evaluasi kelayakan sistem lebih komprehensif.
+
+Perbedaan pola penggunaan metode secara terpisah tersebut berpotensi menyebabkan 
+evaluasi kelayakan sistem menjadi tidak menyeluruh, sebagaimana dikemukakan oleh 
+\cite{Fiandhika2024}. Penelitian ini karena itu menguji apakah kombinasi 
+model RAD untuk pengembangan, RBAC untuk kontrol akses, serta black-box testing, 
+UAT, dan SUS untuk pengujian kelayakan, dapat diterapkan secara terintegrasi pada 
+konteks sistem informasi manajemen magang di lingkungan perguruan tinggi, sekaligus 
+melengkapi evaluasi usability dengan pengujian fungsional agar hasil yang diperoleh 
+lebih valid.
+
+\section{Landasan Teori}
+% Susun subbab sesuai konsep utama penelitian Anda. Tiap subbab memuat
+% definisi, unsur pokok, dan rujukannya. Hindari menyalin definisi
+% panjang; ringkas dengan bahasa sendiri lalu sitasi sumbernya.
+
+\subsection{Sistem Informasi Manajemen}
+Sistem Informasi Manajemen (SIM) adalah sistem yang dirancang untuk menyediakan 
+informasi bagi para manajer dalam rangka mendukung operasi, manajemen, dan 
+pengambilan keputusan dalam sebuah organisasi, dengan mengintegrasikan berbagai 
+sumber data menjadi informasi yang bermakna. SIM merupakan perpaduan dari tiga 
+komponen utama, yaitu manusia, teknologi, dan prosedur (\cite{SafiraArmah2024}).
+
+\subsection{Rapid Application Development (RAD)}
+Rapid Application Development (RAD) merupakan metodologi pengembangan perangkat 
+lunak yang hanya memerlukan perencanaan minimal untuk mempercepat proses 
+pengembangan melalui tiga tahap, yaitu Requirement Planning, RAD Design Workshop, 
+dan Implementation. Model RAD lebih menitikberatkan kegiatan tahap pengembangan 
+daripada tahap perencanaan dan cocok digunakan untuk proyek yang dapat 
+dipisah-pisahkan menjadi beberapa modul (\cite{Parlika2023}).
+
+Tahapan Pelaksanaan Model RAD
+\begin{daftarnomor}
+    \item Requirement Planning \\
+          Pada fase ini, system analyst, customer, dan user akan bertemu dan bersama-sama merumuskan tujuan serta requirements 
+          dari perangkat lunak yang akan dikembangkan. Waktu pada tahapan perencanaan ini hanya dialokasikan secara singkat, 
+          karena proses pengembangan aplikasi akan berjalan secara fleksibel sesuai kebutuhan, berbeda dengan model tradisional 
+          yang mengalokasikan waktu perencanaan lebih panjang.
+    \item RAD Design Workshop \\
+          Pada fase ini akan dibuat sketsa dan diagram yang nantinya akan dijadikan panduan dalam pengembangan perangkat lunak. 
+          ERD, UML, dan diagram-diagram lain dirancang oleh system analyst bersama dengan programmer pada tahap ini. Di sini juga 
+          dibuat rancangan tampilan antarmuka dari perangkat lunak yang dibuat. Fase ini merupakan tahap kolaboratif di mana 
+          desain sistem disusun secara langsung bersama pengguna untuk memastikan kesesuaian dengan kebutuhan mereka.
+    \item Implementation \\
+          Kode dari perangkat lunak akan dibuat pada fase ini. Akan pula dilakukan pengujian oleh QA dan oleh user untuk 
+          memutuskan apakah sistem sudah layak untuk digunakan. Fase ini adalah tahapan memperkenalkan sistem kepada user interface. 
+          Dalam fase ini, terutama dalam tahap pengujian, user akan semakin sering dilibatkan dalam proses pengembangan perangkat lunak. 
+          Tahap ini bisa dikatakan sebagai tahapan terakhir dalam model RAD, karena jika perangkat lunak telah dinilai layak oleh 
+          user dan QA dari proses pengujian, maka perangkat lunak dapat dirilis dan digunakan.
+\end{daftarnomor}
+
+\subsection{Role-Based Access Control (RBAC)}
+Role-Based Access Control (RBAC) adalah model keamanan yang membatasi akses sistem 
+kepada pengguna berdasarkan peran (role) mereka dalam organisasi, terdiri atas tiga 
+komponen utama yaitu pengguna (users), peran (roles), dan izin (permissions), 
+dengan menerapkan prinsip least privilege di mana pengguna hanya diberikan akses 
+minimal yang diperlukan untuk menjalankan tugasnya (\cite{MSahyudi2025}).
+
+\subsection{Black-Box Testing}
+Black-box testing adalah pengujian fungsional yang memverifikasi hasil eksekusi 
+aplikasi berdasarkan masukan yang diberikan untuk memastikan fungsionalitas 
+sistem sesuai dengan persyaratan, tanpa menguji berdasarkan source code program. 
+Salah satu teknik black-box testing adalah state transition testing, yang 
+dilakukan dengan melihat kesesuaian alur dari satu state ke state berikutnya 
+sesuai transisi, keadaan, dan kejadian di antara inputan (\cite{Mintarsih2023}).
+
+\subsection{User Acceptance Testing (UAT)}
+User Acceptance Testing (UAT) merupakan salah satu tahap penting dalam pengujian 
+perangkat lunak yang dilakukan oleh pengguna akhir (end-user) untuk memastikan 
+bahwa perangkat lunak yang dikembangkan memenuhi kebutuhan dan harapan pengguna 
+sebelum diluncurkan secara resmi. Pengujian UAT umumnya difokuskan pada beberapa 
+variabel utama, yaitu fungsionalitas sistem, kinerja sistem, pengalaman dan 
+tampilan antarmuka, serta efisiensi dan produktivitas (\cite{AliyahAliyah2025}).
+
+\subsection{System Usability Scale (SUS)}
+System Usability Scale (SUS) adalah metode yang banyak digunakan untuk 
+mengevaluasi usability suatu sistem secara cepat melalui 10 pernyataan 
+dengan skala Likert. Meskipun demikian, skor SUS lebih merepresentasikan 
+persepsi pengguna dan tidak selalu mencerminkan usability aktual secara 
+menyeluruh, sehingga disarankan untuk dilengkapi dengan metode evaluasi 
+lain seperti heuristic evaluation agar hasil pengukuran lebih dapat 
+diverifikasi (\cite{Fiandhika2024}).
+
+\section{Justifikasi Pemilihan Metode}
+% SUBBAB INI SERING DILUPAKAN, PADAHAL PALING PENTING.
+% Deskriptor KKNI jenjang 6 menuntut kemampuan memilih alternatif solusi
+% secara sadar. Di sinilah kemampuan itu dibuktikan.
+% Bandingkan minimal dua alternatif, lalu nyatakan alasan pemilihan Anda.
+
+Terdapat beberapa model pengembangan perangkat lunak yang lazim digunakan, 
+di antaranya Waterfall dan Prototyping. Model Waterfall bersifat linear sehingga 
+pengelolaannya mudah karena seluruh kebutuhan telah diidentifikasi dan 
+didokumentasikan di awal, namun tidak fleksibel terhadap perubahan kebutuhan 
+dan membutuhkan waktu pengembangan yang relatif lama hingga sistem dapat 
+digunakan oleh pengguna. Model Prototyping mengikuti pendekatan evolutionary 
+dan cocok digunakan ketika kebutuhan pengguna belum diputuskan, tetapi menambah 
+kompleksitas sistem seiring bertambahnya waktu pengembangan serta menimbulkan 
+biaya tambahan untuk pembuatan prototipe awal (\cite{Parlika2023}).
+
+RAD dipilih sebagai model pengembangan dalam penelitian ini karena sistem 
+Manajemen Magang dapat dipecah menjadi beberapa modul fungsional 
+(pendaftaran, bimbingan, penilaian) yang relatif independen, serta melibatkan 
+pengguna secara langsung dalam setiap tahap pengembangan sehingga produk 
+yang dihasilkan lebih sesuai dengan kebutuhan Program Studi Sistem Informasi 
+Unika Atma Jaya. Selain itu, RAD terbukti dapat menghemat waktu pengembangan 
+dibandingkan model tradisional, yang sesuai dengan kebutuhan penelitian ini 
+yang memiliki keterbatasan waktu penyusunan tugas akhir (\cite{Parlika2023}).
+
+Untuk kontrol akses, pendekatan manual tanpa model baku berisiko menimbulkan 
+ketidakkonsistenan hak akses antar-aktor, mengingat sistem ini melibatkan 
+lima aktor dengan kewenangan berbeda. RBAC dipilih karena mampu membatasi 
+akses setiap aktor sesuai perannya masing-masing berdasarkan prinsip least 
+privilege, sehingga mahasiswa, Kaprodi, Koordinator Magang, Dosen Pembimbing, 
+dan Pembimbing Eksternal hanya dapat mengakses fitur yang relevan dengan tugas 
+mereka (\cite{MSahyudi2025}).
+
+Untuk pengujian kelayakan sistem, alternatif yang tersedia adalah menggunakan 
+satu metode evaluasi saja, baik black-box testing, UAT, maupun SUS. Namun, 
+temuan \cite{Fiandhika2024} menunjukkan bahwa skor SUS semata tidak 
+selalu valid tanpa dukungan metode lain. Oleh karena itu, penelitian ini 
+menggunakan kombinasi tiga metode: black-box testing dengan teknik state 
+transition untuk memvalidasi kesesuaian alur fungsional antarmenu 
+(\cite{Mintarsih2023}), UAT untuk mengukur penerimaan pengguna akhir terhadap 
+fungsionalitas dan kinerja sistem (\cite{AliyahAliyah2025}), dan SUS 
+untuk mengukur tingkat usability secara umum. Kombinasi ketiga metode ini 
+dipilih agar evaluasi kelayakan sistem mencakup baik aspek fungsional 
+(alur kerja sistem) maupun aspek penerimaan dan pengalaman pengguna secara 
+lebih menyeluruh.

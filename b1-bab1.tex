@@ -1,0 +1,159 @@
+%==================================================================
+% BAB 1 — PENDAHULUAN
+%
+% Catatan: teks di bawah adalah CONTOH BERJALAN bertema WebQual 4.0.
+% Ganti isinya dengan penelitian Anda, tetapi PERTAHANKAN POLANYA.
+%==================================================================
+
+\chapter{PENDAHULUAN}
+
+\section{Latar Belakang}
+
+Program magang merupakan salah satu komponen kurikuler strategis pada Program Studi 
+Sistem Informasi Universitas Katolik Indonesia Atma Jaya yang bertujuan untuk 
+menjembatani pemahaman teoritis mahasiswa dengan praktik profesional di industri. 
+Bagi mahasiswa, pelaksanaan magang bukan sekadar pemenuhan beban SKS, melainkan sarana 
+pengembangan kompetensi teknis dan manajerial secara nyata. Namun, efektivitas 
+pencapaian tujuan pembelajaran ini sangat bergantung pada tata kelola administratif dan 
+operasional yang terstruktur di tingkat program studi.
+
+Pada realitas operasionalnya, alur pelaksanaan magang di Program Studi Sistem Informasi 
+Unika Atma Jaya masih dihadapkan pada sejumlah kendala mendasar, khususnya terkait belum 
+tersedianya sistem informasi terintegrasi untuk memantau \textit{(monitoring)} setiap tahapan 
+alur magang. Proses tata kelola yang saat ini masih dilakukan secara konvensional dan 
+manual menyebabkan tingginya kompleksitas koordinasi, ketidakjelasan pelacakan status 
+\textit{(status tracking)}, serta kerentanan terhadap ketidaksesuaian prosedur administratif 
+antara mahasiswa, pengelola magang, dan dosen pembimbing.
+
+Kondisi serupa juga ditemukan pada penelitian \cite{Rosanti2025} di LP3L Universitas PGRI 
+Kanjuruhan Malang, yang mengidentifikasi kesulitan pengelolaan data pendaftaran, ketiadaan 
+sistem pemantauan real-time, serta risiko kesalahan input nilai akibat proses yang 
+masih manual. Hal yang sejalan juga dilaporkan oleh \cite{Asehan2026}, yang menemukan 
+bahwa proses magang berbasis logbook fisik dan dokumen cetak di St. Clare College of 
+Caloocan menimbulkan keterlambatan pengumpulan data, ketidakakuratan pencatatan, serta 
+minimnya transparansi dalam pemantauan kemajuan magang.
+
+Dampak dari ketiadaan sistem terpusat ini berimplikasi langsung pada aksesibilitas informasi 
+dan kejelasan tata laksana magang. Mahasiswa kerap mengalami kesulitan dalam memperoleh 
+informasi yang valid dan up-to-date akibat penyebaran sumber informasi yang terfragmentasi. 
+Selain itu, ditemukannya ketidakragaman serta ketidakjelasan format dokumen administratif 
+magang kerap menimbulkan beban kognitif dan ambiguasi bagi mahasiswa dalam memenuhi persyaratan 
+yang ditetapkan. Permasalahan-permasalahan ini tidak hanya menghambat efisiensi operasional 
+alur magang, tetapi juga berpotensi menurunkan kualitas pengalaman akademis mahasiswa, 
+sebagaimana ditegaskan pula oleh \cite{Asehan2026} yang mencatat bahwa proses manual 
+meningkatkan risiko human error, menurunkan akuntabilitas, dan mempersulit penelusuran arsip 
+dalam jangka panjang.
+
+Berdasarkan permasalahan tersebut, keberadaan sebuah sistem informasi monitoring alur magang 
+yang tersentralisasi dan terstruktur menjadi suatu kebutuhan mendesak. Sistem ini diharapkan 
+mampu mengotomatisasi alur kerja, menyediakan transparansi informasi secara real-time, 
+mendokumentasikan berkas secara tersentralisasi, serta menyelaraskan standar format dokumen 
+administrasi. Pendekatan semacam ini terbukti efektif pada penelitian \cite{Rosanti2025}, 
+yang melaporkan tingkat kepuasan pengguna sebesar 88,60 persen setelah penerapan sistem monitoring 
+magang berbasis web, maupun pada penelitian \cite{Asehan2026}, yang mencatat peningkatan 
+signifikan pada aspek kemudahan pemantauan (skor 4,72) dan kepuasan pengguna secara keseluruhan 
+(skor 4,90) setelah penerapan sistem serupa. Dengan demikian, penelitian ini berfokus pada 
+pengembangan dan validasi masalah alur proses magang guna menghasilkan solusi berbasis sistem 
+informasi yang mampu meningkatkan efektivitas, efisiensi, dan tata kelola pelaksanaan magang 
+di Program Studi Sistem Informasi Unika Atma Jaya.
+
+\section{Rumusan Masalah}
+% Setiap rumusan masalah diberi \label agar dapat dirujuk dari Bab 3, 4, dan 5.
+% Merujuknya cukup dengan \cref{rq:kualitas} -> menghasilkan "RQ1".
+% Bila urutannya diubah, seluruh rujukan menyesuaikan sendiri.
+Berdasarkan latar belakang di atas, rumusan masalah penelitian ini adalah:
+
+\begin{rumusanmasalah}
+    \item Bagaimana merancang sistem informasi yang mampu mengintegrasikan dan memantau 
+          (monitoring) setiap tahapan alur magang pada Program Studi Sistem Informasi 
+          Unika Atma Jaya secara terpusat?\label{rq:rancang}
+    \item Bagaimana membangun sistem yang dapat mengotomatisasi alur kerja administrasi 
+          magang guna mengurangi kompleksitas koordinasi antara mahasiswa, pengelola magang, 
+          dan dosen pembimbing?\label{rq:otomasi}
+    \item Sejauh mana efektivitas dan tingkat penerimaan pengguna terhadap sistem informasi 
+          monitoring magang yang dikembangkan?\label{rq:efektivitas}
+\end{rumusanmasalah}
+
+\section{Batasan Masalah}
+Agar pembahasan terfokus, penelitian ini dibatasi sebagai berikut.
+
+\begin{daftarnomor}
+    \item Sistem melibatkan 5 (lima) peran pengguna, yaitu Mahasiswa, Koordinator Magang, 
+          Dosen Pembimbing, Pembimbing Eksternal (Tempat Magang), dan Kepala Program Studi.
+    \item Ruang lingkup fungsional sistem mencakup proses pengajuan dan validasi pendaftaran 
+          magang, pelaksanaan dan bimbingan magang (termasuk pemantauan progres), serta 
+          penilaian akhir magang.
+    \item Sistem dibangun berbasis aplikasi web (web-based application) yang responsif.
+    \item Pengujian sistem dilakukan menggunakan metode \textit{black-box testing}, 
+          \textit{User Acceptance Test} (UAT), dan \textit{System Usability Scale} (SUS).
+\end{daftarnomor}
+
+\section{Tujuan dan Manfaat}
+
+\subsection{Tujuan Penelitian}
+% Tujuan disusun SEJAJAR SATU-SATU dengan rumusan masalah.
+% T1 menjawab RQ1, T2 menjawab RQ2, dan seterusnya.
+\begin{daftartujuan}
+    \item Merancang dan membangun sistem informasi yang dapat memantau setiap tahapan 
+          alur magang secara terpusat pada Program Studi Sistem Informasi Unika Atma Jaya.
+    \item Mengotomatisasi alur kerja administrasi magang untuk menyederhanakan proses 
+          koordinasi antara mahasiswa, pengelola magang, dan dosen pembimbing.
+    \item Mengevaluasi tingkat efektivitas dan penerimaan pengguna terhadap sistem yang 
+          dikembangkan melalui black-box testing, UAT, dan System Usability Scale.
+\end{daftartujuan}
+
+\subsection{Manfaat Penelitian}
+
+\subsubsection{Manfaat Praktis}
+Sistem informasi manajemen magang yang dihasilkan dapat digunakan sebagai alat bantu 
+untuk memantau setiap tahapan alur magang secara terpusat, mengotomatisasi proses 
+administrasi yang sebelumnya dilakukan secara manual, serta menyediakan format dokumen 
+yang seragam dan informasi yang transparan bagi mahasiswa. Dengan demikian, beban 
+administratif dapat berkurang, koordinasi antarpihak menjadi lebih efisien, dan proses 
+pengambilan keputusan terkait pelaksanaan serta penilaian magang dapat dilakukan dengan 
+lebih cepat dan akurat.
+
+\subsubsection{Manfaat Akademis}
+Penelitian ini diharapkan dapat memberikan kontribusi terhadap pengembangan ilmu 
+pengetahuan di bidang sistem informasi, khususnya dalam penerapan konsep perancangan 
+sistem berbasis kebutuhan pengguna (user-centered) untuk menyelesaikan permasalahan 
+tata kelola magang di lingkungan perguruan tinggi. Penelitian ini juga dapat menjadi 
+referensi bagi mahasiswa atau peneliti lain yang tertarik mengembangkan sistem informasi 
+monitoring serupa, baik dari sisi metodologi perancangan, pemodelan proses bisnis, 
+maupun pengujian sistem menggunakan black-box testing, User Acceptance Test (UAT), 
+dan System Usability Scale (SUS). Selain itu, bagi peneliti sendiri, penelitian ini 
+menjadi sarana untuk mengaplikasikan dan memperdalam pemahaman teoritis yang diperoleh 
+selama perkuliahan ke dalam praktik nyata pengembangan perangkat lunak.
+
+\section{Sistematika Penulisan}
+\ifdefstring{\jenisnaskah}{proposal}{%
+Proposal Tugas Akhir ini disusun dalam tiga bab dengan rincian berikut.
+
+\noindent \textbf{BAB 1 PENDAHULUAN} memuat latar belakang, rumusan masalah,
+batasan masalah, serta tujuan dan manfaat penelitian.
+
+\noindent \textbf{BAB 2 TINJAUAN PUSTAKA} memuat sintesis penelitian terdahulu,
+landasan teori yang digunakan, serta justifikasi pemilihan metode.
+
+\noindent \textbf{BAB 3 RANCANGAN PENELITIAN} memuat metodologi penelitian,
+populasi dan sampel, instrumen, teknik analisis data, serta rencana dan jadwal
+penelitian.
+}{%
+Penulisan Tugas Akhir ini disusun dalam lima bab dengan rincian berikut.
+
+\noindent \textbf{BAB 1 PENDAHULUAN} memuat latar belakang, rumusan masalah,
+batasan masalah, tujuan dan manfaat, serta sistematika penulisan.
+
+\noindent \textbf{BAB 2 TINJAUAN PUSTAKA} memuat sintesis penelitian terdahulu,
+landasan teori yang digunakan, serta justifikasi pemilihan metode.
+
+\noindent \textbf{BAB 3 METODE PENELITIAN} memuat tahapan penelitian, populasi
+dan sampel, instrumen, teknik analisis data, serta matriks keterkaitan
+penelitian.
+
+\noindent \textbf{BAB 4 HASIL DAN PEMBAHASAN} memuat hasil penelitian yang
+disajikan per rumusan masalah beserta pembahasannya.
+
+\noindent \textbf{BAB 5 KESIMPULAN DAN SARAN} memuat kesimpulan yang menjawab
+setiap rumusan masalah serta saran untuk penelitian selanjutnya.
+}
